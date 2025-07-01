@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>팽팽 캐릭터 메이커</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.min.css" />
+</head>
+<body>
+  <h1>팽팽 캐릭터 메이커</h1>
+
+  <div id="fieldContainer" class="sortable"></div>
+
+  <div id="addFieldSection">
+    <select id="fieldSelect">
+      <option value="">항목을 선택하세요</option>
+    </select>
+    <button id="addFieldBtn">항목 추가</button>
+  </div>
+
+  <br />
+  <button id="randomAllBtn">전체 랜덤</button>
+  <button id="resetAllBtn">전체 초기화</button>
+  <button id="showResultBtn">결과 보기</button>
+
+  <div id="resultSection" style="display: none;">
+    <br>
+    <div class="customization">
+      <label>포인트 색상:
+        <input type="color" id="colorPicker" value="#cccccc">
+      </label>
+      <label>텍스트 색상:
+        <label><input type="radio" name="textColor" value="#fff" checked> 흰색</label>
+        <label><input type="radio" name="textColor" value="#000"> 검정</label>
+      </label>
+    </div>
+    <br>
+    <div id="result"></div>
+    <br>
+    <button id="saveImageBtn">이미지 저장</button>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
