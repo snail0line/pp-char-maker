@@ -256,9 +256,12 @@ document.getElementById("saveImageBtn").addEventListener("click", () => {
   if (!node) return;
 
   html2canvas(node, {
+    scale: window.devicePixelRatio || 2,
     useCORS: true,
-    backgroundColor: null, // 투명 배경 유지 (또는 "#fff"로 강제할 수 있음)
-    scale: 2
+    scrollX: 0,
+    scrollY: 0,
+    windowWidth: document.body.scrollWidth,
+    windowHeight: document.body.scrollHeight
   }).then(canvas => {
     const link = document.createElement("a");
     link.download = "character.png";

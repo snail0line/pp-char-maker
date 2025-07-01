@@ -123,12 +123,15 @@ input.trait-input {
 
 /* 바깥쪽 배경 (포인트 색상 적용) */
 .result-wrapper {
-  background: var(--accent-color, #cccccc);
-  padding: 2rem;
-  display: inline-block;
+  width: fit-content;
   max-width: 100%;
+  padding: 24px;
+  margin: 0 auto;
   box-sizing: border-box;
+  background: var(--accent-color, #ccc);
+  position: relative;
 }
+
 
 /* 내부 흰색 카드 */
 .styled-result {
